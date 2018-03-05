@@ -1,0 +1,162 @@
+@keyframes dot {
+  0% { opacity: 0.3; }
+  20% { opacity: 0.6; }
+  40% { opacity: 0.9; }
+  60% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes fade-in-typing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in-message {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  5% {
+    display: block;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// extended rules
+%bubble-item{
+  position: relative;
+  top: -5px;
+
+  width: 4px;
+  height: 4px;
+
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+
+  display: inline-block;
+  margin: -1px 1.5px 0 1.5px;
+
+  animation: dot 1.3s infinite;
+}
+%who-typed{
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+
+  background: #fff;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  span{
+    display: inline-block;
+    margin-top: 2px;
+    color: #2F80ED;
+  }
+}
+/* end extended rules */
+
+.chat-wrapper{
+  .dialog-wrapper{
+    position: relative;
+    width: 100%;
+    height: 200px;
+
+    scroll-behavior: smooth;
+    overflow-x: auto;
+
+    .message-wrapper{
+      opacity: 1;
+      visibility: visible;
+      animation: fade-in-message .3s linear;
+
+      margin-bottom: 5px;
+
+      &.left {
+        text-align: left;
+
+        .phrase { margin-left: 10px; }
+      };
+      &.right {
+        flex-direction: row-reverse;
+
+        .phrase { margin-right: 10px; }
+      };
+      &.left, &.right {
+        display: flex;
+        align-items: center;
+
+        .who-text{
+          @extend %who-typed;
+        }
+      }
+      & .phrase{
+        background: rgba(0, 0, 0, 0.25);
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 100px;
+      }
+    }
+  }
+
+  .is-someone-type{
+    height: 30px;
+    margin: 10px 0;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &.visible{
+      visibility: visible;
+      opacity: 1;
+
+      animation: fade-in-typing .3s linear;
+    }
+    &.hidden{
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+    }
+
+    .bubbles-wrapper{
+      width: 40px;
+      height: 20px;
+
+      margin-right: 10px;
+      border-radius: 10px;
+
+      background: #fff;
+      text-align: center;
+
+      .b-1{
+        @extend %bubble-item;
+        animation-delay: 0.1s;
+      }
+      .b-2{
+        @extend %bubble-item;
+        animation-delay: 0.2s;
+      }
+      .b-3{
+        @extend %bubble-item;
+        animation-delay: 0.3s;
+      }
+    }
+
+    .who-is-typing{
+      @extend %who-typed;
+    }
+  }
+}

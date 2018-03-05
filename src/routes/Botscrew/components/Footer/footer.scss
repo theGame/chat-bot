@@ -1,0 +1,36 @@
+footer{
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4em 0;
+
+  .left-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: #fff;
+  }
+
+  .right-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .first-row-links, .second-row-links{
+      display: flex;
+      flex-direction: column;
+
+      & :first-child{ color: #fff };
+
+      a{
+        padding: 10px 20px;
+
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 25px;
+        font-size: 18px;
+        text-align: right;
+      }
+    }
+
+    .second-row-links a{ padding-right: 0; };
+  }
+}

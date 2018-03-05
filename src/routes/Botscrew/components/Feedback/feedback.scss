@@ -1,0 +1,51 @@
+.feedback-wrapper{
+  .tab-pannel-wrapper {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .feedback-text-wrapper{
+    padding-top: 6em;
+    padding-bottom: 6em;
+
+    header{
+      margin-bottom: 20px;
+
+      h2{
+        color: #fff;
+        font-weight: 600;
+
+        &:last-child{ font-weight: 100 };
+      }
+    }
+    .feedback-content{
+      p{
+        color: #fff;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 100;
+      }
+      button{
+        margin: 2em 0 4em;
+        padding: 15px 60px;
+        border-radius: 30px;
+
+        background: #fff;
+        color: #007bff;
+
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+.message{
+  position: absolute;
+  top: 50%;
+  left:50%;
+
+  color: #fff;
+
+  transform: translate(-50%);
+}

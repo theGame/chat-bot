@@ -1,5 +1,10 @@
 .page-layout__viewport {
-  padding-top: 4rem;
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .page-layout__nav-item--active {

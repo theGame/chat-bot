@@ -1,0 +1,31 @@
+.botscrew-spotlight-wrapper{
+  padding-bottom: 5em;
+
+  .spotlight-header{
+    padding-bottom: 3em;
+
+    h2, h3 {
+      font-size: 44px;
+      line-height: 66px;
+    }
+    & h3 { font-weight: 100 }
+  }
+
+  .thumbnail {
+    .caption{
+      padding-top: 1em;
+
+      h3{ font-size: 20px }
+      p{
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+    }
+  }
+}

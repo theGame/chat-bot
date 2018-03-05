@@ -1,0 +1,51 @@
+.botscrew-header{
+  color: #fff;
+
+  background-size: contain;
+  background: linear-gradient(
+      rgba(47, 128, 237, 0.5),
+      rgba(47, 128, 237, 0.5)
+  ), url('./../../assets/909ea57a581a00b2e7e970b7531e1494.jpg') no-repeat 50% 65%;
+
+  .header-top{
+    padding-top: 1.5em;
+
+    .attractie {
+      display: inline-block;
+    }
+    .social-icons {
+      display: inline-block;
+      cursor: pointer;
+      float: right;
+
+      i {
+        padding: 0 8px;
+      }
+    }
+  }
+
+  .header-text{
+    padding: 6rem 0 13rem 0;
+    background: transparent;
+
+    h1, p{
+      font-size: 44px;
+      line-height: 66px;
+      font-weight: 100;
+    }
+    & h1{ font-weight: 600 };
+
+    button{
+      margin-top: 3em;
+      padding: 15px 60px;
+      border-radius: 30px;
+
+      background: #fff;
+      color: #007bff;
+
+      cursor: pointer;
+      outline: none;
+      border: none;
+    }
+  }
+}
